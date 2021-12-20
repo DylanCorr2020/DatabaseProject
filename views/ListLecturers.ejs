@@ -1,0 +1,40 @@
+<style>
+    table th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<h1>Lectures</h1>
+
+
+
+
+<Button onclick="window.location.href='/add/Lecture'"> add Lecture</Button>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Dept</th>
+        
+    </tr>
+    <% lecturers.forEach((lecture)=>
+        { %>
+        <tr>
+            <td>
+                <%= lecture._id %>
+            </td>
+            <td>
+                <%= lecture.name %>
+            </td>
+            <td>
+                <%= lecture.dept %>
+            </td>
+            
+
+        </tr>
+        <% }) %>
+</table>
+
+<a href="/">Home</a>
